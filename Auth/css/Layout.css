@@ -1,6 +1,8 @@
 /* #Header */
 
 .navbar {
+    background: url("https://drive.google.com/uc?export=view&id=1MAIcaM0e15ObaKrX9bvwWl9B0z5CZpCf");
+    background-color: #585b5e;
     z-index: 2001;
 }
 
@@ -19,4 +21,10 @@
     padding: 0 !important;
     text-decoration: none !important;
     color: white !important;
+}
+
+/* #Footer */
+
+.footer {
+    color: white;
 }
