@@ -21,56 +21,53 @@ export class PhotoAlbumsAdd {
     // File selection
     fileSelection(): void {
         photoAlbumsDomElements.customFileInput.addEventListener('change', (e) => {
-            const myPromise = new Promise<void>((resolve, reject) => {
-                files = (e.target as HTMLInputElement).files;
-                if (files !== null) {
-                    if (files.length <= 10) {
-                        for (let i = 0; i < files.length; i++) {
-                            if ((files[i].size / 1024) / 1024 < 20) {
-                                if (/\.(jpe?g|png|gif)$/i.test(files[i].name)) {
-                                    const check = this.addToArray(files[i]);
-                                    if (check) {
-                                        this.showThumbs(files[i].size, files[i].lastModified, files[i], i);
-                                    }
-                                    else {
-                                        Swal.fire({
-                                            icon: 'info',
-                                            title: 'Duplicate!',
-                                            text: `File: ${files[i].name} has already been added!`
-                                        });
-                                    }
+            files = (e.target as HTMLInputElement).files;
+            if (files !== null) {
+                if (files.length <= 10) {
+                    for (let i = 0; i < files.length; i++) {
+                        if ((files[i].size / 1024) / 1024 < 20) {
+                            if (/\.(jpe?g|png|gif)$/i.test(files[i].name)) {
+                                const check = this.addToArray(files[i]);
+                                if (check) {
+                                    this.showThumbs(files[i].size, files[i].lastModified, files[i], i);
                                 }
                                 else {
                                     Swal.fire({
                                         icon: 'info',
-                                        title: 'Wrong file format',
-                                        text: 'Files must be in .jpeg, .png and .gif format!'
+                                        title: 'Duplicate!',
+                                        text: `File: ${files[i].name} has already been added!`
                                     });
                                 }
                             }
                             else {
                                 Swal.fire({
                                     icon: 'info',
-                                    title: 'File size',
-                                    text: `File ${files[i].name} will not be added, it is more than 20 MB`
+                                    title: 'Wrong file format',
+                                    text: 'Files must be in .jpeg, .png and .gif format!'
                                 });
                             }
                         }
+                        else {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'File size',
+                                text: `File ${files[i].name} will not be added, it is more than 20 MB`
+                            });
+                        }
                     }
-                    else {
-                        Swal.fire({
-                            icon: 'info',
-                            title: 'Files quantity',
-                            text: 'You can choose only 10 files at once'
-                        });
-                    }
-                    (document.getElementById('fileInputControl') as HTMLInputElement).value = '';
-                    resolve();
                 }
-            });
-            myPromise.then(() => {
+                else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Files quantity',
+                        text: 'You can choose only 10 files at once'
+                    });
+                }
+                (document.getElementById('fileInputControl') as HTMLInputElement).value = '';
+            }
+            setTimeout(() => {
                 this.numRestruct();
-            });
+            }, 2500);
         });
     }
 
@@ -152,7 +149,7 @@ export class PhotoAlbumsAdd {
                     </div>
                 </div>
             </div>`;
-            photoAlbumsDomElements.output.insertBefore(div, null);
+            photoAlbumsDomElements.output.appendChild(div);
         }, false);
         reader.readAsDataURL(file);
     }
