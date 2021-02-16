@@ -1,0 +1,117 @@
+====================================================================================
+# Folder structure
+
+|--TS_Scripts
+	|--SubFolderName
+		|--package.json
+		|--tsconfig.json
+		|--webpack.config.js
+		|--FileNameMain.ts
+		|-- //-//.ts
+	|-- //-//.ts
+	|--tsconfig.json
+
+====================================================================================
+====================================================================================
+# Inside package.json
+
+{
+  "name": "Name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "path": "0.12.7",
+    "ts-loader": "5.2.1",
+    "typescript": "3.8.3",
+    "webpack": "4.42.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.11.0",
+    "tslint": "^6.1.3",
+    "tslint-react": "^5.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^10.10.0"
+  }
+}
+
+====================================================================================
+====================================================================================
+# Inside tsconfig.json
+
+{
+	"compilerOptions": {
+		"target": "ES6",       
+		"module": "commonjs",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,                   
+		"forceConsistentCasingInFileNames": true
+	}
+}
+
+====================================================================================
+====================================================================================
+# Inside webpack.config.js
+
+const path = require('path');
+module.exports = {
+    // Building mode
+    mode: 'development',
+    // Entry point of the application
+    entry: './FileNameMain.ts',
+    // Target application
+    output: {
+        path: path.resolve(__dirname, '../../Scripts/CustomScripts'),
+        filename: 'FileName.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                loader: 'ts-loader'
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+    optimization: {
+        minimize: true
+    }
+};
+
+====================================================================================
+
+====================================================================================
+# How to install (node_modules)
+
+- You need to have installed NodeJS
+	Link: https://nodejs.org/en/
+
+- At the command prompt> npm install        
+	Example: C:\Users\User\source\repos\Hata\HataCom\TS_Scripts\SubFolderName>npm install
+
+====================================================================================
+
+====================================================================================
+# How to use WebPack
+
+- At the command prompt> npm run build        
+	Example: C:\Users\User\source\repos\Hata\HataCom\TS_Scripts\SubFolderName>npm run build 
+
+- A new file will be compiled in the folder:
+	Scripts/CustomScripts/NewFile.js
+
+====================================================================================
