@@ -1,0 +1,172 @@
+/* Body */
+
+body {
+    background: rgb(36, 58, 96);
+    background: linear-gradient(90deg, rgba(36, 58, 96, 1) 0%, rgba(12, 78, 113, 1) 50%, rgba(36, 58, 96, 1) 100%);
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+    margin-top: 1rem !important;
+    background-color: transparent !important;
+}
+
+.breadcrumb-item {
+    color: #B7B7B7 !important;
+}
+
+.active, .albums-quantity {
+    color: white !important;
+}
+
+/* Subsection name, Button */
+
+.subsection-name {
+    margin-bottom: 1rem !important;
+    color: white !important;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.10127801120448177) 0%, rgba(255, 255, 255, 0.7483368347338936) 50%, rgba(255, 255, 255, 0.10407913165266103) 100%);
+    opacity: .2;
+}
+
+.add-album-btn {
+    padding: 0.6rem 2rem !important;
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+    box-shadow: none !important;
+}
+
+.add-album-btn:hover {
+    background-color: #00bba8 !important;
+    border-color: #00bba8 !important;
+}
+
+.add-album-btn-mobile {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+}
+
+/* Card */
+
+.album-item {
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: none !important;
+    transition: ease .5s;
+}
+
+.album-item:hover {
+    box-shadow: 0px 10px 10px 10px #0096879c !important;
+}
+
+.image-wrp {
+    width: 100% !important;
+    background: black !important;
+    overflow: hidden !important;
+}
+
+.album-cover-img {
+    object-fit: cover !important;
+}
+
+.card-title {
+    margin-bottom: 0 !important;
+}
+
+.album-name-row, .album-description-row {
+    justify-content: center !important;
+}
+
+.card-btn-settings {
+    box-shadow: none !important;
+}
+
+.card-btn-settings:focus {
+    color: #00bba8 !important;
+}
+
+/* Card-Mobile */
+
+.card-body-mobile {
+    position: absolute !important;
+    margin-left: 1rem;
+    color: white !important;
+}
+
+.album-cover-img-mobile {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.7 !important;
+}
+
+.album-name-row-mobile, .album-description-row-mobile {
+    justify-content: start !important;
+}
+
+.dropup-mobile {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}
+
+.card-btn-settings-mobile {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: white !important;
+}
+
+/* Preview */
+
+.preview-item {
+    border: none !important;
+    transition: .5s !important;
+}
+
+.thumb {
+    width: 100% !important;
+}
+
+.thumb-menu {
+    position: absolute;
+}
+
+.thumb-btn {
+    border-radius: 2px !important;
+    font-size: 12px !important;
+}
+
+.thumb-input {
+    padding: 0 !important;
+}
+
+.thumb-checkbox, .thumb-checkbox-text, .remove {
+    cursor: pointer;
+}
+
+.thumb-checkbox-text, .remove {
+    font-size: 15px !important;
+}
+
+.thumb-checkbox-text:hover {
+    color: #000000;
+}
+
+.remove:hover {
+    color: #db0202;
+}
+
+.thumb-wrp {
+    max-height: 8em !important;
+    overflow: hidden;
+}

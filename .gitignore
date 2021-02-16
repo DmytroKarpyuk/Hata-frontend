@@ -1,0 +1,5 @@
+.idea
+img/
+tracks/
+node_modules/
+package-lock.json

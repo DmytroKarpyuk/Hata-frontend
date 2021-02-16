@@ -1,0 +1,69 @@
+.wrp {
+    background: #fde5a3d0;
+    padding: 0 !important;
+    overflow: hidden;
+    border: #333333 2px solid;
+}
+
+.wrp a {
+    text-decoration: none !important;
+}
+
+.img-photo {
+    background: url(./img/Img1.jpg);
+}
+
+.img-video {
+    background: url(./img/Img2.jpg);
+}
+
+.img-music {
+    background: url(./img/Img3.jpg);
+}
+
+.img-archive {
+    background: url(./img/Img4.jpg);
+}
+
+.img-photo, .img-video, .img-music, .img-archive {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    color: #ccfff7;
+    text-shadow: 0 0 4px #000000;
+    transition: .3s ease;
+}
+
+.img-photo:hover, .img-video:hover, .img-music:hover, .img-archive:hover {
+    opacity: .9;
+    transform: scale(1.02);
+    color: #edbcff;
+    text-shadow: 0 0 2px #000000;
+}
+
+.text-menu h1 {
+    font-size: 2.5rem !important;
+}
+
+.text-menu p {
+    font-size: 1.1rem !important;
+}
+
+.text-menu :hover {
+    transform: none;
+}
+
+/* Медіа запити для блоків меню початкової сторінки */
+
+@media (min-width: 560px) and (max-width: 576px) {
+    .wrp {
+        max-width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .img-photo, .img-video, .img-music, .img-archive {
+        height: 25vh;
+    }
+}

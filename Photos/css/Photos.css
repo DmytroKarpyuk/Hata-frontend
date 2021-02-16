@@ -1,0 +1,220 @@
+/* #Body */
+
+body {
+    background: rgb(36, 58, 96);
+    background: linear-gradient(90deg, rgba(36, 58, 96, 1) 0%, rgba(12, 78, 113, 1) 50%, rgba(36, 58, 96, 1) 100%);
+}
+
+.user-image {
+    width: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+.account {
+    padding: 0 !important;
+    text-decoration: none !important;
+}
+
+/* #Breadcrumb */
+
+.breadcrumb {
+    margin-top: 1rem !important;
+    background-color: transparent !important;
+}
+
+.breadcrumb-item {
+    color: #B7B7B7 !important;
+}
+
+.active {
+    color: white !important;
+}
+
+/* #Album name, Description, Quantity, Add-Button, Edit-Button */
+
+.album-name, .album-description, .photos-quantity {
+    color: white !important;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.10127801120448177) 0%, rgba(255, 255, 255, 0.7483368347338936) 50%, rgba(255, 255, 255, 0.10407913165266103) 100%);
+    opacity: .2;
+}
+
+.edit-album-btn {
+    padding: 0 !important;
+    background: transparent !important;
+    color: #f1f1f1 !important;
+    border-color: #f1f1f100 !important;
+    box-shadow: none !important;
+}
+
+.edit-album-btn:hover {
+    color: #f2c474 !important;
+    background: #f1f1f100 !important;
+    border-color: #f1f1f100 !important;
+}
+
+.add-photos-btn {
+    padding: 0.6rem 2rem !important;
+    background-color: #309abb !important;
+    border-color: #309abb !important;
+    box-shadow: none !important;
+}
+
+.add-photos-btn:hover {
+    background-color: #42b5d8 !important;
+    border-color: #42b5d8 !important;
+}
+
+.add-photos-btn-mobile {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    background-color: #309abb !important;
+    border-color: #309abb !important;
+}
+
+.edit-album-btn-mobile {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    color: #f1f1f1;
+    border-color: #cfcfcf00 !important;
+}
+
+/* #Card */
+
+.column-item {
+    transition: .3s;
+}
+
+.photo-item {
+    overflow: hidden;
+    border: none !important;
+}
+
+.link-active {
+    z-index: 1020;
+}
+
+.photo-img {
+    object-fit: cover !important;
+}
+
+.checkbox-remove {
+    position: absolute;
+    z-index: 1002;
+    display: none;
+}
+
+.photo-name-wrp {
+    min-width: 100% !important;
+    padding: 0.7rem 1rem !important;
+    z-index: 1001 !important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.466) 0%, rgba(0, 0, 0, 0.205) 20%, rgba(0, 0, 0, 0) 100%);
+}
+
+.photo-name {
+    margin-bottom: 0 !important;
+}
+
+/* #Card-Mobile */
+
+@media (min-width: 500px) and (max-width: 576px) {
+    .column-item {
+        max-width: 50% !important;
+    }
+}
+
+/* #Edit Mode */
+
+textarea {
+    resize: none !important;
+}
+
+.album-name-editing {
+    font-size: 2rem !important;
+    display: none;
+}
+
+.album-description-editing {
+    display: none;
+}
+
+.album-name-label {
+    display: none;
+}
+
+.album-description-label {
+    display: none;
+}
+
+.photo-name-editing {
+    display: none;
+    z-index: 2030;
+}
+
+.pop-up-remove-btn {
+    padding: 0.4rem 2rem !important;
+    box-shadow: none !important;
+}
+
+.pop-up-remove-btn-mobile {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+}
+
+.pop-up {
+    width: 100%;
+    height: 55px;
+    background: #f3d39c;
+    transition: .3s;
+    z-index: 1009;
+}
+
+.pop-up-cancel {
+    background: transparent !important;
+    border-color: transparent !important;
+    outline: transparent !important;
+    color: black !important;
+    font-size: 1.7rem !important;
+    box-shadow: none !important;
+}
+
+.pop-up-save {
+    padding: 0.4rem 2rem !important;
+    box-shadow: none !important;
+}
+
+.pop-up-cancel-mobile {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+}
+
+.pop-up-save-mobile {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 6px 0px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+}
+
+/* #anim {
+    width: 600px;
+    margin: 0 auto;
+} */

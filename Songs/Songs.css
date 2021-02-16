@@ -1,0 +1,166 @@
+/*.col-xl-1, .col-sm-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-sm-8, .col-xl-11, .row {*/
+/*    border: #008080 1px solid;*/
+/*}*/
+
+body {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(72, 130, 171, 0.55)), color-stop(100%, rgba(220, 66, 37, 0.5)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(72, 130, 171, 0.55) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(72, 130, 171, 0.55) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 130, 171, 0.55)), to(rgba(220, 66, 37, 0.5)));
+    background: linear-gradient(to bottom, rgba(72, 130, 171, 0.55) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+    /* IE6-9 */
+}
+
+/* #Card */
+.card {
+    border-radius: 10px !important;
+    overflow: hidden;
+    border: none !important;
+    transition: .5s;
+}
+
+.card-title {
+    font-size: 20px !important;
+}
+
+.card-text {
+    font-size: 16px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card-title {
+        font-size: 20px !important;
+    }
+
+    .card-text {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .card-title {
+        font-size: 18px !important;
+    }
+
+    .card-text {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title {
+        font-size: 18px !important;
+    }
+
+    .card-text {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .card-title {
+        font-size: 24px !important;
+    }
+
+    .card-text {
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .card-title {
+        font-size: 22px !important;
+    }
+
+    .card-text {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .card-title {
+        font-size: 20px !important;
+    }
+
+    .card-text {
+        font-size: 16px !important;
+    }
+}
+
+/* #Panel */
+.panel {
+    margin-bottom: -1000px;
+    background: #ffffff;
+    z-index: 999;
+    transition: all ease .5s;
+    border: rgba(136, 136, 136, 0.52) 1px solid;
+}
+
+.album-cover-panel-wrp {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.album-cover-panel {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 680px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 500px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 230px !important;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 160px !important;
+    }
+}
+
+@media only screen and (max-width: 367px) {
+    .song-name {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 100px !important;
+    }
+}

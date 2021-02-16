@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/Auth.css">
+    <link rel="stylesheet" href="../css/Layout.css">
+    <title>Photo Albums</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../img/hata-logo.svg" alt="" srcset="">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+                <div class="nav-item dropdown">
+                    <a class="nav-link account" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <!-- User name & photo -->
+                        <span class="mr-2">User Account</span>
+                        <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" class="user-image"
+                            alt="...">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background image -->
+    <div class="fixed-top bg-image"></div>
+
+    <!-- "Auth" main container -->
+    <div class="container main-container" style="margin-top: 56px;">
+        <div class="row" style="margin-top: 70px;">
+            <div class="col-12 col-lg-7">
+                <div class="d-flex align-content-center flex-wrap head-text">
+                    <div class="row welcome-text-main">
+                        <h1>Вітаємо на сайті ХАТА!</h1>
+                    </div>
+                    <div class="row welcome-text-second">
+                        <p>Заходьте у гості!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 column-wrp">
+                <div class="form-wrp">
+                    <h2 class="form-header">Вхід</h2>
+                    <div class="row mt-4">
+                        <div class="col-3">
+                            <a href="#" class="form-link signin-link active-link">УВІЙТИ</a>
+                        </div>
+                        <div class="col-9 text-center">
+                            <a href="#" class="form-link signup-link">ЗАРЕЄСТРУВАТИСЬ</a>
+                        </div>
+                    </div>
+                    <!-- Sign in form -->
+                    <form class="mt-5 signin-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" aria-describedby="emailHelp"
+                                placeholder="Електронна адреса">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Пароль">
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Запам'ятати мене</label>
+                                </div>
+                            </div>
+                            <div class="col text-right">
+                                <a href="#" class="forget-password">Забули пароль?</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3 submit-btn">Увійти</button>
+                        <div class="row mt-4 justify-content-center">
+                            <h6 class="alternative-text">Або увійти за допомогою</h6>
+                        </div>
+                        <a class="btn btn-outline-light w-100 mt-3 social-btn" href="https://www.google.com/"
+                            role="button"><img class="mr-2" src="../img/Google.svg">Продовжити з Google</a>
+                        <a class="btn btn-outline-light w-100 mt-4 social-btn" href="https://www.facebook.com/"
+                            role="button"><img class="mr-2" src="../img/Google.svg">Продовжити з Facebook</a>
+                    </form>
+                    <!-- Sign up form -->
+                    <form class="mt-5 signup-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" aria-describedby="emailHelp"
+                                placeholder="Електронна адреса">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp"
+                                        placeholder="Ім'я">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp"
+                                        placeholder="Прізвище">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Пароль">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Підтвердіть пароль">
+                        </div>
+                        <div class="row mt-4">
+                            <h6 class="birth-text">Дата народження</h6>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-12">
+                                <input class="form-control birth-date" type="date" value="">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3 submit-btn">Зареєструватись</button>
+                        <div class="row mt-4 justify-content-center">
+                            <h6 class="alternative-text">Або увійти за допомогою</h6>
+                        </div>
+                        <a class="btn btn-outline-light w-100 mt-3 social-btn" href="https://www.google.com/"
+                            role="button"><img class="mr-2" src="../Google.svg">Продовжити з Google</a>
+                        <a class="btn btn-outline-light w-100 mt-4 social-btn" href="https://www.facebook.com/"
+                            role="button"><img class="mr-2" src="../Facebook.svg">Продовжити з Facebook</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid text-center mt-5 text-white">
+
+        <!-- Horizontal line -->
+        <div class="mb-3 horizontal-line"></div>
+        <footer>
+            <p>© 2020 - HATA</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../dist/Auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/536545ba96.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+        class="fancybox-active"></script>
+</body>
+
+</html>

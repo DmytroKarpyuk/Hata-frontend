@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MusicAlbums.css">
+    <title>Music Albums</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HATA</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+                <div class="nav-item dropdown">
+                    <a class="nav-link account" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <!--ІМ'Я ТА ФОТО КОРИСТУВАЧА-->
+                        <span class="mr-2">User Account</span>
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGO23znCVYpSA/profile-displayphoto-shrink_800_800/0?e=1605139200&v=beta&t=A3Q3_u0x4Vxc_yMKjXo7ortKooT6LgqJFjQGxBYKE7k"
+                            class="user-image" alt="...">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--СПІЛЬНИЙ КОНТЕЙНЕР "ФОТО АЛЬБОМИ"-->
+    <div class="container main-container" style="margin-top: 55px;">
+
+        <!--ХЛІБНІ КРИХТИ"-->
+        <div class="row">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-item">Головна</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Фото</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!--НАЗВА ПІДРОЗДІЛУ ТА КНОПКА "ДОДАТИ АЛЬБОМ"-->
+        <div class="row justify-content-between align-items-center pl-3 pr-3">
+            <h2 class="subsection-name">Фотоальбоми</h2>
+
+            <!--КНОПКА "ДОДАТИ АЛЬБОМ"-->
+            <button type="button" class="btn btn-info add-album-btn" id="modalButton" data-toggle="modal"
+                data-target=".bd-example-modal-lg">
+                Додати альбом
+            </button>
+        </div>
+
+        <!--МОДАЛЬНЕ ВІКНО-->
+        <div class="modal fade bd-example-modal-lg" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add an album</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="newAlbumForm">
+                            <div class="form-group">
+                                <label for="album-name" class="col-form-label">Name:</label>
+                                <input type="text" class="form-control" id="album-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="album-description" class="col-form-label">Description:</label>
+                                <textarea class="form-control" id="album-description"></textarea>
+                            </div>
+
+                            <div class="modal-footer">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="fileInputControl"
+                                            accept="image/*" onchange="onChange(event)"
+                                            aria-describedby="inputGroupFileAddon01" multiple>
+                                        <label class="custom-file-label" for="fileInputControl">Choose files</label>
+                                    </div>
+                                </div>
+                                <div class="row output"></div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary ml-2" id="btn-submit"
+                                        data-dismiss="modal">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--СПІЛЬНИЙ РЯДОК ДЛЯ ВІДОБРАЖЕННЯ АЛЬБОМІВ-->
+        <div class="row albums-list"></div>
+
+    </div>
+
+    <div class="container-fluid footer text-center">
+        <hr />
+        <footer>
+            <p>© 2020 - HATA</p>
+        </footer>
+    </div>
+
+    <!--BOOTSTRAP LINKS-->
+    <script src="MusicAlbums.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/536545ba96.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+
+</html>
