@@ -16,7 +16,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://drive.google.com/uc?export=view&id=1S7bDdIjMGlB0GnCwZIHLPppmuMKIP2id" alt="" srcset="">
@@ -34,8 +34,8 @@
                         aria-haspopup="true" aria-expanded="false">
                         <!-- User name & photo -->
                         <span class="mr-2">User Account</span>
-                        <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg"
-                            class="user-image" alt="...">
+                        <img src="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" class="user-image"
+                            alt="...">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
@@ -122,8 +122,41 @@
 
         <!-- Photos quantity, Add photos btn -->
         <div class="row justify-content-between align-items-center pl-3 pr-3 mb-5">
-            <h6 class="photos-quantity">Фото ()</h6>
-            <button type="button" class="btn btn-dark add-photos-btn"></button>
+            <h6 class="photos-quantity">Фото (16)</h6>
+            <button type="button" class="btn btn-dark add-photos-btn" id="modalButton" data-toggle="modal"
+                data-target=".bd-example-modal-lg"></button>
+        </div>
+
+        <!-- Modal window -->
+        <div class="modal fade bd-example-modal-lg" id="exampleModalCenteredScrollable" data-backdrop="static"
+            tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true"
+            aria-modal="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Add photos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row output"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="input-group mb-3">
+                            <input type="file" class="custom-file-input" id="fileInputControl" accept="image/*"
+                                aria-describedby="inputGroupFileAddon01" multiple>
+                            <label class="custom-file-label" for="fileInputControl">Choose files</label>
+                        </div>
+                        <button type="button" class="btn btn-secondary modal-close-btn"
+                            data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary modal-confirm-btn ml-2" id="btn-submit"
+                            data-dismiss="modal">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Photos list -->

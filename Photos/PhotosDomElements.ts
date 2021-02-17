@@ -4,6 +4,7 @@
     navbarToggler: HTMLDivElement;
     breadCrumb: HTMLDivElement;
     addBtn: HTMLDivElement;
+    customFileInput: HTMLInputElement;
     editBtn: HTMLDivElement;
     popUp: HTMLDivElement;
     popUpCancel: HTMLDivElement;
@@ -15,12 +16,15 @@
     albumDescriptionEditing: HTMLDivElement;
     albumNameLabel: HTMLDivElement;
     albumDescriptionLabel: HTMLDivElement;
+    btnSubmit: HTMLElement;
+    output: HTMLDivElement;
     constructor() {
         this.mainContainer = document.querySelector('.main-container') as HTMLDivElement;
         this.navBar = document.querySelector('.navbar') as HTMLDivElement;
         this.navbarToggler = document.querySelector('.navbar-toggler') as HTMLDivElement;
         this.breadCrumb = document.querySelector('.breadcrumbs') as HTMLDivElement;
         this.addBtn = document.querySelector('.add-photos-btn') as HTMLDivElement;
+        this.customFileInput = document.querySelector('.custom-file-input') as HTMLInputElement;
         this.editBtn = document.querySelector('.edit-album-btn') as HTMLDivElement;
         this.popUpRemove = document.querySelector('.pop-up-remove-btn') as HTMLDivElement;
         this.popUp = document.querySelector('.pop-up') as HTMLDivElement;
@@ -32,5 +36,7 @@
         this.albumDescriptionEditing = document.querySelector('.album-description-editing') as HTMLDivElement;
         this.albumNameLabel = document.querySelector('.album-name-label') as HTMLDivElement;
         this.albumDescriptionLabel = document.querySelector('.album-description-label') as HTMLDivElement;
+        this.btnSubmit = document.querySelector('#btn-submit') as HTMLElement;
+        this.output = document.querySelector('.output') as HTMLDivElement;
     }
 }

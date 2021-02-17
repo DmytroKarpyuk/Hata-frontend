@@ -9,3 +9,8 @@ export interface AlbumToEdit {
     albumDescription?: string;
     photosToEdit: PhotosToEdit[];
 }
+
+export interface PhotosToAdd {
+    name: string;
+    isCover: boolean;
+}

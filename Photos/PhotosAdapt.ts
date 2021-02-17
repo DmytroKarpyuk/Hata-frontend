@@ -14,11 +14,11 @@ export class PhotosAdapt {
     init(): void {
         this.listenForLoad();
         this.listenForResize();
-        this.adaptMainContainer();  
+        this.adaptMainContainer();
     }
-	
-	listenForLoad(): void {
-		window.addEventListener('load', () => {
+
+    listenForLoad(): void {
+        window.addEventListener('load', () => {
             this.width = document.body.clientWidth;
             this.height = screen.height;
 
@@ -28,10 +28,10 @@ export class PhotosAdapt {
                 this.removeClass();
             }
         });
-	}
-	
-	listenForResize(): void {
-		window.addEventListener('resize', () => {
+    }
+
+    listenForResize(): void {
+        window.addEventListener('resize', () => {
             this.width = document.body.clientWidth;
             this.height = screen.height;
 
@@ -41,11 +41,11 @@ export class PhotosAdapt {
                 this.removeClass();
             }
         });
-	}
+    }
 
-	adaptMainContainer(): void {
-		photosDomElements.mainContainer.style.minHeight = (this.height - 55).toString() + 'px';
-	}	
+    adaptMainContainer(): void {
+        photosDomElements.mainContainer.style.minHeight = (this.height - 55).toString() + 'px';
+    }
 
     /** Add a new classes for mobile mode */
     addClass(): void {

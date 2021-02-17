@@ -3,19 +3,15 @@
 const path = require('path');
 
 module.exports = {
-
     // Building mode
     mode: 'development',
-
     // Entry point of the application
-    entry: './PhotosMain.ts',
-
+    entry: '../Hata-frontend/Photos/PhotosMain.ts',
     // Target application
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: 'Photos.js'
+        path: path.resolve(__dirname, './Photos/dist'),
+        filename: 'PhotoAlbums.js'
     },
-
     module: {
         rules: [
             {
@@ -25,11 +21,9 @@ module.exports = {
             }
         ]
     },
-
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-
     optimization: {
         minimize: true
     }
